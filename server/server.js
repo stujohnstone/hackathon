@@ -14,15 +14,20 @@ app.use(cors());
  */
 app.get('/api/data', function(req, res, next) {
 
-  const MongoClient = require('mongodb').MongoClient;
-  const uri = "mongodb+srv://malibu_user:dwMUVnl6uYZD4YJ2@malibu1-dlhj5.mongodb.net/test?retryWrites=true&w=majority";
-  const client = new MongoClient(uri, { useNewUrlParser: true });
-  client.connect(err => {
-    const collection = client.db("malibudb").collection("hackathon");
-    console.log(collection);
-    // perform actions on the collection object
-    client.close();
-  });
+  try {
+    const MongoClient = require('mongodb').MongoClient;
+    const uri = "mongodb+srv://malibu_user:dwMUVnl6uYZD4YJ2@malibu1-dlhj5.mongodb.net/test?retryWrites=true&w=majority";
+    const client = new MongoClient(uri, { useNewUrlParser: true });
+    client.connect(err => {
+      const collection = client.db("malibudb").collection("hackathon");
+      console.log(collection);
+      // perform actions on the collection object
+      client.close();
+    });
+  }
+  catch(error) {
+    res.status(500).send(error);
+  }
 });
 app.get('/api/newsfeed', function(req, res, next) {
   let data = [{
