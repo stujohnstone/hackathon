@@ -18,15 +18,6 @@ npm install -g heroku
 heroku login
 '''
 
-verify with the following command
-'''
-heroku pg:info --app malibuapp
-'''
-
-### To establish a psql session with your remote database
-'''
-heroku pg:psql --app malibuapp
-'''
 
 ### NPM Scripts
 
@@ -50,4 +41,4 @@ Starts the server.
 
 Runs build after deploying to heroku.
 
-
+Go T3amMaliboo !!

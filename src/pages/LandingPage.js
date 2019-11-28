@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
 import NavMain from "../components/NavMain";
-import HeroUnit from "../components/HeroUnit";
-import ExamplePost from "../components/ExamplePost";
-import Map from "../components/Map";
+import NewsFeed from "../components/NewsFeed";
 
 const styles = theme => ({
   root: {
@@ -23,15 +21,9 @@ function LandingPage(props) {
     <React.Fragment>
       <NavMain>
         <div className={classes.root}>
-          <Grid container spacing={3}>
+          <Grid container spacing={8}>
             <Grid item xs={12}>
-                <HeroUnit />
-            </Grid>
-            <Grid item xs={6}>
-                <ExamplePost></ExamplePost>
-            </Grid>
-            <Grid item xs={6}>
-                <Map />
+               <NewsFeed></NewsFeed>
             </Grid>
           </Grid>
         </div>
