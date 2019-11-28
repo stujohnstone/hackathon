@@ -66,7 +66,9 @@ module.exports = (env, argv) => {
       contentBase: path.join(__dirname, "public"),
       // for all 404 pages send back the html file
       historyApiFallback: true,
-      publicPath: "/dist/"
+      publicPath: "/dist/",
+      compress: true,
+      port: 9000
     }
   };
 };
