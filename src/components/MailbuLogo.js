@@ -36,7 +36,7 @@ export const MalibuLogo = props => {
             <main>
                 <div>
                     <Typography
-                        variant="display3"
+                        variant="h1"
                         align="center"
                         color="textPrimary"
                         gutterBottom

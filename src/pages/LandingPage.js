@@ -24,7 +24,7 @@ function LandingPage(props) {
     <React.Fragment>
       <NavMain>
         <div className={classes.root}>
-          <Grid container spacing={3}>
+          <Grid container spacing={8}>
             <Grid item xs={12}>
                 <HeroUnit />
             </Grid>

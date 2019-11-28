@@ -11,6 +11,8 @@ import Grid from "@material-ui/core/Grid";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
+import AutoCompleteSelectCountries from "./AutoCompleteSelectCountries";
+import MalibuLogo from "./MailbuLogo";
 
 const styles = theme => ({
 
@@ -62,22 +64,15 @@ const styles = theme => ({
     },
 });
 
-class PostForm extends React.Component {
+class ExamplePost extends React.Component {
     render() {
         const {classes, children} = this.props;
 
         return (
             <React.Fragment>
                 <main className={classes.layout}>
-                    <Typography
-                        variant="display3"
-                        align="center"
-                        color="textPrimary"
-                        gutterBottom
-                    >
-                        🏝️MALIBU🏝️
-                    </Typography>
-                    <Typography align="center" variant="headline">Create a Notification</Typography>
+                    <MalibuLogo/>
+                    <Typography align="center" variant="h4">Create a Notification</Typography>
 
 
                     <form>
@@ -151,18 +146,11 @@ class PostForm extends React.Component {
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
-                                    autoComplete={true}
-                                    id="DepartureDestination"
-                                    className={classes.textField}
-                                    label="Depature Destination"/>
+                                <AutoCompleteSelectCountries label={"Departure"}/>
+
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
-                                    autoComplete={true}
-                                    id="ArrivalDestination"
-                                    className={classes.textField}
-                                    label="Arrival Destination"/>
+                               <AutoCompleteSelectCountries label={"Destination"}/>
                             </Grid>
                         </Grid>
                         <TextField
@@ -211,8 +199,8 @@ const handleChange = name => event => {
 
 };
 
-PostForm.propTypes = {
+ExamplePost.propTypes = {
     classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(PostForm);
+export default withStyles(styles)(ExamplePost);
