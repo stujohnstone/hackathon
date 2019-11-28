@@ -26,7 +26,7 @@ export const Map = props => {
       animate={true}
       easeLinearity={0.35}
     >
-      <TileLayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
+      <TileLayer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
       <Marker position={[50, 10]}>
         <Popup>Popup for any custom information.</Popup>
       </Marker>
