@@ -60,12 +60,12 @@ export const HeroUnit = props => {
             <Grid container spacing={16} justify="center">
               <Grid item>
                 <Button variant="contained" color="primary">
-                  Main call to action
+                  Sign Up
                 </Button>
               </Grid>
               <Grid item>
                 <Button variant="outlined" color="primary">
-                  Secondary action
+                  Login
                 </Button>
               </Grid>
             </Grid>
