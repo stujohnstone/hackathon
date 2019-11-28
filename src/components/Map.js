@@ -5,6 +5,10 @@ import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 const styles = theme => ({
   icon: {
     marginRight: theme.spacing.unit * 2
+  },
+  mapContainer: {
+    width: "100%",
+    height: "400px"
   }
 });
 
@@ -14,6 +18,7 @@ export const Map = props => {
   const zoom = 12;
 
   return (
+    <div className={classes.mapContainer}>
     <LeafletMap
       center={[50, 10]}
       zoom={6}
@@ -31,6 +36,7 @@ export const Map = props => {
         <Popup>Popup for any custom information.</Popup>
       </Marker>
     </LeafletMap>
+    </div>
   );
 };
 
