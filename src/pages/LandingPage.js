@@ -7,6 +7,7 @@ import NavMain from "../components/NavMain";
 import HeroUnit from "../components/HeroUnit";
 import ExamplePost from "../components/ExamplePost";
 import Map from "../components/Map";
+import Typography from "@material-ui/core/Typography";
 
 const styles = theme => ({
   root: {
@@ -44,4 +45,27 @@ LandingPage.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(LandingPage);
+
+function frontPage(props){
+  const { classes} = props
+
+  return (
+      <React.Fragment>
+        <NavMain>
+          <div className={classes.root}>
+
+              <HeroUnit/>
+          </div>
+        </NavMain>
+
+      </React.Fragment>
+  )
+
+
+}
+
+function handleLogInPress(){
+    window.location.assign("/signin");
+}
+
+export default withStyles(styles)(frontPage);

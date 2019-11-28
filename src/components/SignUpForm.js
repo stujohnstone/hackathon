@@ -87,6 +87,22 @@ function PaperSheet(props) {
               className={classes.textField}
               margin="normal"
             />
+            <TextField
+              required
+              id="airlineName"
+              label="Airline"
+              className={classes.textField}
+              margin="normal"
+          />
+            <TextField
+                required
+                id="pilotNumber"
+                label="Pilot Number"
+                type="number"
+                className={classes.textField}
+                margin="normal"
+            />
+
             <Button
               variant="contained"
               color="primary"

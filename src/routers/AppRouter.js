@@ -9,7 +9,9 @@ import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import DashboardPage from "../pages/DashboardPage";
 import AddPostPage from '../pages/AddPostPage';
-
+import Map from "../components/Map";
+import ShowNotifications from "../components/ShowNotifications";
+import ExamplePost from "../components/ExamplePost";
 const history = createBrowserHistory();
 
 export default () => {
@@ -17,7 +19,7 @@ export default () => {
     <Router history={history}>
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <PublicRoute path="/signin" component={SignInPage} />
+        <PublicRoute path="/signin" component={ShowNotifications} />
         <PublicRoute path="/signup" component={SignUpPage} />
         <PrivateRoute path="/dashboard" component={DashboardPage} />
         <PrivateRoute path="/addpost" component={AddPostPage} />
