@@ -15,8 +15,6 @@ if (process.env.NODE_ENV === "test") {
 }
 
 module.exports = (env, argv) => {
-  console.log(env);
-
   return {
     entry: ["babel-polyfill", "./src/index.js"],
     output: {
@@ -54,7 +52,10 @@ module.exports = (env, argv) => {
         inject: false
       }),
       new webpack.DefinePlugin({
-        // Define global constants here..
+        'process.env': {
+          REACT_APP_APPID: JSON.stringify(process.env.REACT_APP_APPID),
+          REACT_APP_APIKEY: JSON.stringify(process.env.REACT_APP_APIKEY),
+        },
       }),
       new BundleAnalyzerPlugin({
         analyzerMode: "disable",

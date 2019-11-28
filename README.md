@@ -11,6 +11,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. git checkout -b pull-request-demo
 2. git push origin pull-request-demo
 
+### Using Heroku 
+
+'''
+npm install -g heroku
+heroku login
+'''
+
+
 ### NPM Scripts
 
 #### **npm run build**
@@ -33,4 +41,4 @@ Starts the server.
 
 Runs build after deploying to heroku.
 
-
+Go T3amMaliboo !!

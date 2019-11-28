@@ -1,17 +1,11 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+import NewsFeed from "../components/NewsFeed";
 
 export const DashboardPage = () => {
   return (
     <React.Fragment>
-      <Typography
-        variant="display3"
-        align="center"
-        color="textPrimary"
-        gutterBottom
-      >
-        Dashboard page
-      </Typography>
+      <NewsFeed></NewsFeed>
     </React.Fragment>
   );
 };
