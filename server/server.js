@@ -5,7 +5,6 @@ const app = express();
 const publicPath = path.join(__dirname, "..", "public");
 const port = process.env.PORT || 3000;
 
-require('dotenv').config({ path: '.env' });
 app.use(express.static(publicPath));
 app.use(cors());
 
@@ -13,8 +12,6 @@ app.use(cors());
 /**
  * API
  */
-
-
 app.get('/api/data', function(req, res, next) {
 
   const MongoClient = require('mongodb').MongoClient;
@@ -22,6 +19,7 @@ app.get('/api/data', function(req, res, next) {
   const client = new MongoClient(uri, { useNewUrlParser: true });
   client.connect(err => {
     const collection = client.db("malibudb").collection("hackathon");
+    console.log(collection);
     // perform actions on the collection object
     client.close();
   });
@@ -58,4 +56,3 @@ app.get('*', function(req, res) {
 app.listen(port, () => {
   console.log("Server is up!");
 });
-

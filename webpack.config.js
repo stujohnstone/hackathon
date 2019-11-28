@@ -15,6 +15,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 module.exports = (env, argv) => {
+  console.log(env);
+
   return {
     entry: ["babel-polyfill", "./src/index.js"],
     output: {
@@ -52,10 +54,7 @@ module.exports = (env, argv) => {
         inject: false
       }),
       new webpack.DefinePlugin({
-        'process.env': {
-          REACT_APP_APPID: JSON.stringify(process.env.REACT_APP_APPID),
-          REACT_APP_APIKEY: JSON.stringify(process.env.REACT_APP_APIKEY),
-        },
+        // Define global constants here..
       }),
       new BundleAnalyzerPlugin({
         analyzerMode: "disable",
@@ -67,9 +66,7 @@ module.exports = (env, argv) => {
       contentBase: path.join(__dirname, "public"),
       // for all 404 pages send back the html file
       historyApiFallback: true,
-      publicPath: "/dist/",
-      compress: true,
-      port: 9000
+      publicPath: "/dist/"
     }
   };
 };
