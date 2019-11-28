@@ -19,6 +19,7 @@ app.get('/api/data', function(req, res, next) {
   const client = new MongoClient(uri, { useNewUrlParser: true });
   client.connect(err => {
     const collection = client.db("malibudb").collection("hackathon");
+    console.log(collection);
     // perform actions on the collection object
     client.close();
   });
