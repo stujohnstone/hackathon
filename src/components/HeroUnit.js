@@ -34,37 +34,36 @@ const styles = theme => ({
 
 export const HeroUnit = props => {
   const { classes } = props;
-
   return (
     <React.Fragment>
       <main>
         <div className={classes.heroContent}>
           <Typography
-            variant="display3"
-            align="center"
-            color="textPrimary"
-            gutterBottom
+              variant="display3"
+              align="center"
+              color="textPrimary"
+              gutterBottom
           >
             🏝️MALIBU🏝️
           </Typography>
           <Typography
-            variant="title"
-            align="center"
-            color="textSecondary"
-            paragraph
+              variant="title"
+              align="center"
+              color="textSecondary"
+              paragraph
           >
-            Malibu is a mix of Facebook, Uber, Twitter, SMS
-            and a sprinkle of Nearly Christmas Magic(tm)
+            Always have an experienced pilot by your side
+
           </Typography>
           <div className={classes.heroButtons}>
             <Grid container spacing={16} justify="center">
               <Grid item>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" onClick={handleSignUpPress}>
                   Sign Up
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant="outlined" color="primary">
+                <Button variant="outlined" color="primary" onClick={handleLogInPress}>
                   Login
                 </Button>
               </Grid>
@@ -75,6 +74,14 @@ export const HeroUnit = props => {
     </React.Fragment>
   );
 };
+function handleLogInPress(){
+  window.location.assign("/signin");
+}
+
+function handleSignUpPress(){
+  window.location.assign("/signup");
+}
+
 
 HeroUnit.propTypes = {
   classes: PropTypes.object.isRequired

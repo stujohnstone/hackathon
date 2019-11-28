@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
 import NavMain from "../components/NavMain";
-import NewsFeed from "../components/NewsFeed";
+import HeroUnit from "../components/HeroUnit";
+import ExamplePost from "../components/ExamplePost";
+import Map from "../components/Map";
+import Typography from "@material-ui/core/Typography";
 
 const styles = theme => ({
   root: {
@@ -21,9 +24,15 @@ function LandingPage(props) {
     <React.Fragment>
       <NavMain>
         <div className={classes.root}>
-          <Grid container spacing={8}>
+          <Grid container spacing={3}>
             <Grid item xs={12}>
-               <NewsFeed></NewsFeed>
+                <HeroUnit />
+            </Grid>
+            <Grid item xs={6}>
+                <ExamplePost></ExamplePost>
+            </Grid>
+            <Grid item xs={6}>
+                <Map />
             </Grid>
           </Grid>
         </div>
@@ -36,4 +45,27 @@ LandingPage.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(LandingPage);
+
+function frontPage(props){
+  const { classes} = props
+
+  return (
+      <React.Fragment>
+        <NavMain>
+          <div className={classes.root}>
+
+              <HeroUnit/>
+          </div>
+        </NavMain>
+
+      </React.Fragment>
+  )
+
+
+}
+
+function handleLogInPress(){
+    window.location.assign("/signin");
+}
+
+export default withStyles(styles)(frontPage);
