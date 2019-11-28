@@ -251,7 +251,7 @@ class NavMain extends React.Component {
                 color="inherit"
                 noWrap
               >
-                Vistair
+                Mal
               </Typography>
               {this.renderButtons()}
             </Toolbar>

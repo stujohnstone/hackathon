@@ -45,7 +45,7 @@ export const HeroUnit = props => {
             color="textPrimary"
             gutterBottom
           >
-            Malibu
+            🏝️MALIBU🏝️
           </Typography>
           <Typography
             variant="title"

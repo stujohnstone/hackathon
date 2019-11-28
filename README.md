@@ -6,6 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. Run 'npm run dev' from cli to generate public/dist.
 3. Run 'npm run dev-server' for development with live-reloading.
 
+### Making Changes
+
+1. git checkout -b pull-request-demo
+2. git push origin pull-request-demo
+
 ### NPM Scripts
 
 #### **npm run build**
@@ -27,3 +32,5 @@ Starts the server.
 #### **heroku-postbuild**
 
 Runs build after deploying to heroku.
+
+
