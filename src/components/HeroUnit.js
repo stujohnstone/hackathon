@@ -45,7 +45,7 @@ export const HeroUnit = props => {
             color="textPrimary"
             gutterBottom
           >
-            Project Surreal Scarecrow
+            Malibu
           </Typography>
           <Typography
             variant="title"
@@ -53,7 +53,7 @@ export const HeroUnit = props => {
             color="textSecondary"
             paragraph
           >
-            Project Surreal Scarecrow is a mix of Facebook, Uber, Twitter, SMS
+            Malibu is a mix of Facebook, Uber, Twitter, SMS
             and a sprinkle of Nearly Christmas Magic(tm)
           </Typography>
           <div className={classes.heroButtons}>
