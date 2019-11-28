@@ -11,6 +11,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. git checkout -b pull-request-demo
 2. git push origin pull-request-demo
 
+### Using Heroku 
+
+'''
+npm install -g heroku
+heroku login
+'''
+
+verify with the following command
+'''
+heroku pg:info --app malibuapp
+'''
+
+### To establish a psql session with your remote database
+'''
+heroku pg:psql --app malibuapp
+'''
+
 ### NPM Scripts
 
 #### **npm run build**
