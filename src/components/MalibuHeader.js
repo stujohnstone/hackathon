@@ -38,12 +38,12 @@ export const MalibuHeader = props => {
                 <div>
                     <MalibuLogo/>
                     <Typography
-                        variant="title"
+                        variant="h3"
                         align="center"
                         color="textSecondary"
                         paragraph
                     >
-                        Always have an experienced pilot by your side
+                        Fly with confidence, fly with Malibu
 
                     </Typography>
                 </div>

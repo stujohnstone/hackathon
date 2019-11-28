@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+import { Autocomplete } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
 
 // ISO 3166-1 alpha-2
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function AutoCompleteSelectCountries() {
+export default function AutoCompleteSelectCountries(props) {
     const classes = useStyles();
 
     return (
@@ -45,7 +45,7 @@ export default function AutoCompleteSelectCountries() {
             renderInput={params => (
                 <TextField
                     {...params}
-                    label="Choose a country"
+                    label={props.label}
                     variant="outlined"
                     fullWidth
                     inputProps={{

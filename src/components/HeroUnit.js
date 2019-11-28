@@ -39,7 +39,7 @@ export const HeroUnit = props => {
       <main>
         <div className={classes.heroContent}>
           <Typography
-              variant="display3"
+              variant="h1"
               align="center"
               color="textPrimary"
               gutterBottom
@@ -47,16 +47,16 @@ export const HeroUnit = props => {
             🏝️MALIBU🏝️
           </Typography>
           <Typography
-              variant="title"
+              variant="h3"
               align="center"
               color="textSecondary"
               paragraph
           >
-            Always have an experienced pilot by your side
+            Fly with confidence, fly with Malibu
 
           </Typography>
           <div className={classes.heroButtons}>
-            <Grid container spacing={16} justify="center">
+            <Grid container spacing={3} justify="center">
               <Grid item>
                 <Button variant="contained" color="primary" onClick={handleSignUpPress}>
                   Sign Up
