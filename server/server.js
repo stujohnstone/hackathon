@@ -3,10 +3,12 @@ const express = require("express");
 const cors = require('cors');
 const app = express();
 const publicPath = path.join(__dirname, "..", "public");
-const port = process.env.PORT || config.httpPort;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 app.use(cors());
+
+
 
 
 /**
@@ -16,14 +18,14 @@ app.use(cors());
 
 app.get('/api/data', function(req, res, next) {
 
-  const MongoClient = require('mongodb').MongoClient;
-  const uri = "mongodb+srv://malibu_user:dwMUVnl6uYZD4YJ2@malibu1-dlhj5.mongodb.net/test?retryWrites=true&w=majority";
-  const client = new MongoClient(uri, { useNewUrlParser: true });
-  client.connect(err => {
-    const collection = client.db("malibudb").collection("hackathon");
+  //const MongoClient = require('mongodb').MongoClient;
+  //const uri = "mongodb+srv://malibu_user:dwMUVnl6uYZD4YJ2@malibu1-dlhj5.mongodb.net/test?retryWrites=true&w=majority";
+  //const client = new MongoClient(uri, { useNewUrlParser: true });
+  //client.connect(err => {
+  //  const collection = client.db("malibudb").collection("hackathon");
     // perform actions on the collection object
-    client.close();
-  });
+  //  client.close();
+  //});
 });
 app.get('/api/newsfeed', function(req, res, next) {
   let data = [{
@@ -57,4 +59,3 @@ app.get('*', function(req, res) {
 app.listen(port, () => {
   console.log("Server is up!");
 });
-
