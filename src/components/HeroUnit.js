@@ -45,7 +45,7 @@ export const HeroUnit = props => {
             color="textPrimary"
             gutterBottom
           >
-            Landing page
+            Project Surreal Scarecrow
           </Typography>
           <Typography
             variant="title"
@@ -53,10 +53,8 @@ export const HeroUnit = props => {
             color="textSecondary"
             paragraph
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            congue orci sit amet tortor semper, sit amet pretium odio dignissim.
-            Quisque odio lacus, ullamcorper sit amet ultrices sed, placerat a
-            orci odio lacus.
+            Project Surreal Scarecrow is a mix of Facebook, Uber, Twitter, SMS
+            and a sprinkle of Nearly Christmas Magic(tm)
           </Typography>
           <div className={classes.heroButtons}>
             <Grid container spacing={16} justify="center">
