@@ -21,8 +21,8 @@ export default () => {
         <Route exact path="/" component={LandingPage} />
         <PublicRoute path="/signin" component={ShowNotifications} />
         <PublicRoute path="/signup" component={SignUpPage} />
-        <PrivateRoute path="/dashboard" component={DashboardPage} />
-        <PrivateRoute path="/addpost" component={AddPostPage} />
+        <PublicRoute path="/dashboard" component={DashboardPage} />
+        <PublicRoute path="/addpost" component={AddPostPage} />
       </Switch>
     </Router>
   );

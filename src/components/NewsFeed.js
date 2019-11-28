@@ -8,7 +8,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log("****Fetching******")
-    let url = 'http://localhost:3000/api/newsfeed';
+    let url = 'https://malibuapp.herokuapp.com/api/newsfeed';
     fetch(url).
     then(response => response.json()).then((r) => {
       console.log(r);
@@ -20,7 +20,7 @@ class App extends Component {
   
 
   renderItems(){
-    return this.state.feed.map((item,i) => <NewsFeedItem description={item.description} title={item.title}></NewsFeedItem>)
+    return this.state.feed.map((item,i) => <NewsFeedItem key={i} description={item.description} title={item.title}></NewsFeedItem>)
   } 
 
   render() {
