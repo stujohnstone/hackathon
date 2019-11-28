@@ -10,7 +10,7 @@
     "dev-server": "webpack-dev-server --env development --mode=development --open",
     "build": "webpack  --env production --mode=production",
     "start": "node server/server.js",
-    "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
+    "heroku-postbuild": "npm run build"
   },
   "author": "Sam Okasha",
   "license": "MIT",
