@@ -1,7 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 // NODE_ENV will be 'production' on heroku, 'test' in testing env, and if neither it will be 'development'
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
@@ -39,6 +40,10 @@ module.exports = (env, argv) => {
               options: { minimize: true }
             }
           ]
+        },
+        {
+          test: /\.css$/,
+          use: ["style-loader", "css-loader"]
         }
       ]
     },
@@ -52,7 +57,7 @@ module.exports = (env, argv) => {
         // Define global constants here..
       }),
       new BundleAnalyzerPlugin({
-        analyzerMode: 'disable',
+        analyzerMode: "disable",
         generateStatsFile: false
       })
     ],
