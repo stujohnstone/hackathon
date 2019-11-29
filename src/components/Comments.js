@@ -16,8 +16,8 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Map from "../components/Map";
-import Comments from "../components/Comments";
 import { withStyles } from "@material-ui/core/styles";
+import Box from '@material-ui/core/Box';
 
 const styles = theme => ({
   card: {
@@ -27,29 +27,14 @@ const styles = theme => ({
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
-  mapContainer: {
-    paddingTop:"50px",
-    width: "100%",
-    height: "200px"
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
 });
 
+const divStyle = {
+  padding: '2px'
+};
 
 
-export const NewsFeedItem = props => {
+export const Comment = props => {
   //const classes = useStyles();
   const { classes } = props;
   const [expanded, setExpanded] = React.useState(false);
@@ -58,22 +43,15 @@ export const NewsFeedItem = props => {
     setExpanded(!expanded);
   };
 
-  function PostHeader(props) {
-    if (!!props.item.image) {
-      return <CardMedia
-      className={classes.media}
-      image={`dist/resources/post_${props.item.image}.png`}
-      title={props.item.image}
-    />;
-    }
-    return <Map zoom='5' lat={props.item.lat} long={props.item.long}/>;
-  }
+  console.log(props);
   
   return (
-    <Card className={classes.card}>
+    props.comments.map((comment,i) => <div style={divStyle}>
+      
+      <Card className={classes.card}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar} src={`dist/resources/${props.item.user}.png`}>
+          <Avatar aria-label="recipe" className={classes.avatar} src={`dist/resources/${comment.user}.png`}>
           </Avatar>
         }
         action={
@@ -81,13 +59,11 @@ export const NewsFeedItem = props => {
             <MoreVertIcon />
           </IconButton>
         }
-        title={props.item.title}
-        subheader={props.item.message_date}
+        title={comment.user}
+        subheader={comment.comment_date}
       />
-      <PostHeader item={props.item} ></PostHeader>
-
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">{props.item.message}
+        <Typography variant="body2" color="textSecondary" component="p">{comment.comment}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -108,12 +84,9 @@ export const NewsFeedItem = props => {
           <ExpandMoreIcon />
         </IconButton>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Comments comments={props.item.comments} Text='tet'></Comments>
-        </CardContent>
-      </Collapse>
     </Card>
+
+      </div>)
   );
 }
 
@@ -122,4 +95,4 @@ NewsFeedItem.propTypes = {
   classes: PropTypes.object.isRequired
 };
 */
-export default withStyles(styles)(NewsFeedItem);
+export default withStyles(styles)(Comment);

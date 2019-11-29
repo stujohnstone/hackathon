@@ -12,34 +12,43 @@ import ReportIcon from "@material-ui/icons/Report";
 import HomeIcon from "@material-ui/icons/Home";
 import NotificationIcon from "@material-ui/icons/Notifications";
 import CreateIcon from "@material-ui/icons/Create";
+import { Link } from 'react-router-dom';
 
 
 export const mailFolderListItems = (
   <div>
+    <Link to ='/home' >
     <ListItem button>
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
-    <ListItem button>
+    </Link>
+    <Link to ='/notifications' >
+      <ListItem button>
       <ListItemIcon>
         <NotificationIcon />
       </ListItemIcon>
       <ListItemText primary="Notifications" />
-    </ListItem>
+      </ListItem>
+    </Link>
+    <Link to ='/newnotification' >
     <ListItem button>
       <ListItemIcon>
         <CreateIcon />
       </ListItemIcon>
       <ListItemText primary="New Notification" />
     </ListItem>
+    </Link>
+    <Link to ='/tags' >
       <ListItem button>
           <ListItemIcon>
               <CreateIcon />
           </ListItemIcon>
           <ListItemText primary="Tags" />
       </ListItem>
+      </Link>
   </div>
 );
 

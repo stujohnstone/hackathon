@@ -7,7 +7,6 @@ const styles = theme => ({
     marginRight: theme.spacing.unit * 2
   },
   mapContainer: {
-    paddingTop:"50px",
     width: "100%",
     height: "700px"
   }
@@ -15,14 +14,14 @@ const styles = theme => ({
 
 export const Map = props => {
   const { classes } = props;
-  const position = [51.505, -0.09];
-  const zoom = 12;
+  const position = [props.lat, props.long];
+  const zoom = props.zoom;
 
   return (
     <div className={classes.mapContainer}>
     <LeafletMap
-      center={[51.4700, -0.4543]}
-      zoom={10}
+      center={position}
+      zoom={zoom}
       name={"test"}
       maxZoom={10}
       attributionControl={true}
@@ -34,8 +33,8 @@ export const Map = props => {
       easeLinearity={0.35}
     >
       <TileLayer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
-      <Marker position={[18.1096, 77.2975]}>
-        <Popup>Popup for any custom information.</Popup>
+      <Marker position={position}>
+        <Popup>Event</Popup>
       </Marker>
 
     </LeafletMap>
