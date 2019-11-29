@@ -65,7 +65,19 @@ const countries = [
     { code: 'LHR', label: 'London Heathrow' },
     { code: 'LGW', label: 'London Gatwick' },
     { code: 'CDG', label: 'Paris' },
-    { code: 'SFA', label: 'San Francisco' },
+    { code: 'SFO', label: 'San Francisco' },
+    { code: 'JFK', label: 'New York' },
+    { code: 'MOW', label: 'Moscow'},
+    { code: 'STO', label: 'Stockholm' },
+    { code: 'SEL', label: 'Seoul' },
+    { code: 'TYO', label: 'Tokyo' },
+    { code: 'BER', label: 'Berlin' },
+    { code: 'MIL', label: 'Milan' },
+    { code: 'ATL', label: 'Atlanta'},
+    { code: 'MBJ', label: 'Montego Bay' },
+    { code: 'CWL', label: 'Cardiff' },
+    { code: 'BRS', label: 'Bristol' },
+    { code: 'SOU', label: 'Southampton' },
 
 ];
 

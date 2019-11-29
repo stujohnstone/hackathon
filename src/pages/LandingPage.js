@@ -8,6 +8,7 @@ import HeroUnit from "../components/HeroUnit";
 import ExamplePost from "../components/ExamplePost";
 import Map from "../components/Map";
 import Typography from "@material-ui/core/Typography";
+import MusicPlayer from "../components/MusicPlayer";
 
 
 
@@ -20,6 +21,9 @@ const styles = theme => ({
   },
 });
 
+
+
+
 export class LandingPage extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +32,7 @@ export class LandingPage extends React.Component {
     return (
       <React.Fragment>
         <HeroUnit/>
+<MusicPlayer/>
       </React.Fragment>
     );
   }
