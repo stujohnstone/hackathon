@@ -9,6 +9,7 @@ import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import DashboardPage from "../pages/DashboardPage";
 import AddPostPage from '../pages/AddPostPage';
+import NewsfeedPage from '../pages/Newsfeed';
 import ExamplePost from "../components/ExamplePost";
 const history = createBrowserHistory();
 
@@ -21,6 +22,7 @@ export default () => {
         <PublicRoute path="/signup" component={SignUpPage} />
         <PublicRoute path="/dashboard" component={DashboardPage} />
         <PublicRoute path="/addpost" component={AddPostPage} />
+        <PublicRoute path="/newsfeed" component={NewsfeedPage} />
       </Switch>
     </Router>
   );
