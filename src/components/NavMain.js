@@ -209,9 +209,9 @@ class NavMain extends React.Component {
           </IconButton>
         </div>
         <Divider />
-        <List>{mailFolderListItems}</List>
+        <List
+            onClick={onItemClickHandler}>{mailFolderListItems}</List>
         <Divider />
-        <List>{otherMailFolderListItems}</List>
       </Drawer>
     );
 
@@ -246,7 +246,7 @@ class NavMain extends React.Component {
                 component={Link}
                 className={classes.logoText}
                 to="/"
-                variant="title"
+                variant="h6"
                 color="inherit"
                 noWrap
               >
@@ -280,6 +280,11 @@ NavMain.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired
 };
+
+function onItemClickHandler(event){
+  var loc =  event.target.childNodes[0].textContent;
+  window.location.assign("/" +loc.toLowerCase().replace(/\s/g,''));
+}
 
 const mapStateToProps = ({ auth }) => ({
   auth

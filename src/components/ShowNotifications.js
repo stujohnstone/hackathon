@@ -10,6 +10,7 @@ import Map from "../components/Map";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import MalibuLogo from "./MailbuLogo";
+import AutoCompleteSelectCountries from "./AutoCompleteSelectCountries";
 
 const styles = theme => ({
 
@@ -50,7 +51,7 @@ function frontPage(props){
                     <Grid container spacing={8}>
                     <Grid item xs={12}>
                         <Typography className={classes.titletext}
-                            variant="display1"
+                            variant="h3"
                             align="center"
                             color="textPrimary"
                             gutterBottom={true}
@@ -62,9 +63,9 @@ function frontPage(props){
 
                     <Grid container spacing={8}>
 
-                        <Grid item xs={6}>
+                        <Grid item xs={3}>
                             <Typography
-                                variant="title"
+                                variant="h6"
                                 align="left"
                                 color="textPrimary"
                                 gutterBottom
@@ -72,17 +73,17 @@ function frontPage(props){
                                 Filter By...
                             </Typography>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={9}>
                             <Typography
-                                variant="title"
+                                variant="h6"
                                 align="left"
                                 color="textPrimary"
                                 gutterBottom
                             >
-                                Route.
+                                Route...
                             </Typography>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={3}>
                             <TextField
                                 id="date"
                                 label="Date Of Incident"
@@ -95,19 +96,12 @@ function frontPage(props){
                                 }}
                             />
                         </Grid>
-                        <Grid item xs={3}>
-                            <TextField
-                                autoComplete={true}
-                                id="DepartureDestination"
-                                className={classes.textField}
-                                label="Depature "/>
+                        <Grid item xs={4.5}>
+                            <AutoCompleteSelectCountries label={"Departure"}/>
+
                         </Grid>
-                        <Grid item xs={3}>
-                            <TextField
-                                autoComplete={true}
-                                id="ArrivalDestination"
-                                className={classes.textField}
-                                label=" Destination"/>
+                        <Grid item xs={4.5}>
+                          <AutoCompleteSelectCountries label={"Destination"}/>
                         </Grid>
                         <Grid item xs={12}>
                             <Map/>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NewsFeedItem from "../components/NewsFeedItem";
 
-class App extends Component {
+class NewsFeed extends Component {
   state = {
     feed: [],
   }
@@ -32,4 +32,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default NewsFeed;

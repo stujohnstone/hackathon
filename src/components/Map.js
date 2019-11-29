@@ -23,6 +23,7 @@ export const Map = props => {
     <LeafletMap
       center={[51.4700, -0.4543]}
       zoom={10}
+      name={"test"}
       maxZoom={10}
       attributionControl={true}
       zoomControl={true}
