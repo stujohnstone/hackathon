@@ -9,6 +9,8 @@ import ExamplePost from "../components/ExamplePost";
 import Map from "../components/Map";
 import Typography from "@material-ui/core/Typography";
 
+
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -18,54 +20,18 @@ const styles = theme => ({
   },
 });
 
-function LandingPage(props) {
-  const { classes } = props;
-  return (
-    <React.Fragment>
-      <NavMain>
-        <div className={classes.root}>
-          <Grid container spacing={8}>
-            <Grid item xs={12}>
-                <HeroUnit />
-            </Grid>
-            <Grid item xs={6}>
-                <ExamplePost></ExamplePost>
-            </Grid>
-            <Grid item xs={6}>
-                <Map />
-            </Grid>
-          </Grid>
-        </div>
-      </NavMain>
-    </React.Fragment>
-  );
-};
-
-LandingPage.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-
-function frontPage(props){
-  const { classes} = props
-
-  return (
+export class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
       <React.Fragment>
-        <NavMain>
-          <div className={classes.root}>
-
-              <HeroUnit/>
-          </div>
-        </NavMain>
-
+        <HeroUnit/>
       </React.Fragment>
-  )
-
-
+    );
+  }
 }
 
-function handleLogInPress(){
-    window.location.assign("/signin");
-}
+export default  withStyles(styles)(LandingPage);
 
-export default withStyles(styles)(frontPage);

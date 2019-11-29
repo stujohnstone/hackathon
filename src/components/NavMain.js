@@ -282,8 +282,8 @@ NavMain.propTypes = {
 };
 
 function onItemClickHandler(event){
-  var loc =  event.target.childNodes[0].textContent;
-  window.location.assign("/" +loc.toLowerCase().replace(/\s/g,''));
+  //var loc =  event.target.childNodes[0].textContent;
+  //window.location.assign("/" +loc.toLowerCase().replace(/\s/g,''));
 }
 
 const mapStateToProps = ({ auth }) => ({
