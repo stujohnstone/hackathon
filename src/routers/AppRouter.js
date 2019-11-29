@@ -9,7 +9,6 @@ import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import DashboardPage from "../pages/DashboardPage";
 import AddPostPage from '../pages/AddPostPage';
-import NewsfeedPage from '../pages/Newsfeed';
 import ExamplePost from "../components/ExamplePost";
 import ShowNotifications from "../components/ShowNotifications";
 import NewsFeed from "../components/NewsFeed";
@@ -33,4 +32,5 @@ export default () => {
             </Switch>
         </Router>
     );
+
 };
