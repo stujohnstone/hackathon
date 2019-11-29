@@ -28,7 +28,8 @@ app.post('/api/messages', (req, res) => {
 
 //Get Newsfeed
 app.get('/api/messages', (req, res) => {
-  db.collection('messages').find().toArray((err, result) => {
+  db.collection('messages').find({}, {"sort" : ['message_date', 'asc']} ).toArray((err, result) => {
+  //db.collection('messages').find().toArray((err, result) => {
     if (err) return console.log('**ERROR' + err)
     res.status(200).send(result);
   })
