@@ -47,7 +47,7 @@ class NewsFeedItem extends React.Component {
         <main className={classes.layout}>
 
         <Paper className={classes.root}>
-          <Avatar alt="Remy Sharp" src="/resources/planes.jpg" />
+          <Avatar alt="Remy Sharp" src="dist/resources/planes.jpg" />
           <Typography variant="h5" component="h3">
             {this.props.title}
           </Typography>
