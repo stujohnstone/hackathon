@@ -55,6 +55,7 @@ export const HeroUnit = props => {
             Fly with confidence, fly with Malibu
 
           </Typography>
+          <img src="dist/resources/planes.jpg" alt="hero image"></img>
           <div className={classes.heroButtons}>
             <Grid container spacing={3} justify="center">
               <Grid item>

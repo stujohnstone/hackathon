@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import NewsFeedItem from "../components/NewsFeedItem";
 
+const divStyle = {
+  color: 'blue',
+  padding: '1em'
+};
+
 class NewsFeed extends Component {
   state = {
     feed: [],
   }
+
 
   componentDidMount() {
     console.log("****Fetching******")
@@ -18,9 +24,8 @@ class NewsFeed extends Component {
     });
   };
   
-
   renderItems(){
-    return this.state.feed.map((item,i) => <NewsFeedItem key={i} event_category={item.event_category} aircraft={item.aircraft}></NewsFeedItem>)
+    return this.state.feed.map((item,i) => <div style={divStyle}><NewsFeedItem key={i} item={item}></NewsFeedItem></div>)
   } 
 
   render() {
