@@ -8,6 +8,7 @@ import HeroUnit from "../components/HeroUnit";
 import ExamplePost from "../components/ExamplePost";
 import Map from "../components/Map";
 import Typography from "@material-ui/core/Typography";
+import MusicPlayer from "../components/MusicPlayer";
 
 const styles = theme => ({
   root: {
@@ -28,6 +29,7 @@ function LandingPage(props) {
             <Grid item xs={12}>
                 <HeroUnit />
             </Grid>
+
             <Grid item xs={6}>
                 <ExamplePost></ExamplePost>
             </Grid>
@@ -53,6 +55,7 @@ function frontPage(props){
       <React.Fragment>
         <NavMain>
           <div className={classes.root}>
+              <MusicPlayer/>
 
               <HeroUnit/>
           </div>

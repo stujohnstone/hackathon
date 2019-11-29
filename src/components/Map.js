@@ -34,35 +34,10 @@ export const Map = props => {
       easeLinearity={0.35}
     >
       <TileLayer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
-      <Marker position={[51.4700, -0.4543]}>
+      <Marker position={[18.1096, 77.2975]}>
         <Popup>Popup for any custom information.</Popup>
       </Marker>
 
-      <Marker position={[51.4700, -0.4543]}>
-        <Popup>Popup for any custom information.</Popup>
-      </Marker> <Marker position={[52.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.20, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4200, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.42, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker> <Marker position={[51.4700, -0.4543]}>
-      <Popup>Popup for any custom information.</Popup>
-    </Marker>
     </LeafletMap>
     </div>
   );
