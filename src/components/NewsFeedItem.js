@@ -130,8 +130,7 @@ export const NewsFeedItem = props => {
     <Card className={classes.card}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+          <Avatar aria-label="recipe" className={classes.avatar} src="dist/resources/P1.png">
           </Avatar>
         }
         action={
