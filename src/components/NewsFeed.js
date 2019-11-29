@@ -8,7 +8,7 @@ class NewsFeed extends Component {
 
   componentDidMount() {
     console.log("****Fetching******")
-    let url = 'https://malibuapp.herokuapp.com/api/newsfeed';
+    let url = 'https://malibuapp.herokuapp.com/api/messages';
     fetch(url).
     then(response => response.json()).then((r) => {
       console.log(r);
@@ -20,7 +20,7 @@ class NewsFeed extends Component {
   
 
   renderItems(){
-    return this.state.feed.map((item,i) => <NewsFeedItem key={i} description={item.description} title={item.title}></NewsFeedItem>)
+    return this.state.feed.map((item,i) => <NewsFeedItem key={i} event_category={item.event_category} aircraft={item.aircraft}></NewsFeedItem>)
   } 
 
   render() {
