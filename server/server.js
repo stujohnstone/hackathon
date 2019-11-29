@@ -51,6 +51,7 @@ app.post('/api/newsfeed', function(req, res, next) {
 /**
 * STATIC FILES
 */
+app.use('/resources', express.static('resources'))
 app.use('/', express.static('app'));
 
 // Default every route except the above to serve the index.html
