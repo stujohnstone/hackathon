@@ -1,8 +1,10 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
+
 
 // NODE_ENV will be 'production' on heroku, 'test' in testing env, and if neither it will be 'development'
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
@@ -55,7 +57,11 @@ module.exports = (env, argv) => {
       }),
       new webpack.DefinePlugin({
         // Define global constants here..
+
       }),
+      new CopyWebpackPlugin([
+        {from:'src/resources',to:'resources'} 
+      ]), 
       new BundleAnalyzerPlugin({
         analyzerMode: "disable",
         generateStatsFile: false
