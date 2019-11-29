@@ -3,6 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from "@material-ui/core/styles";
 import MalibuLogo from "./MailbuLogo";
 import Typography from "@material-ui/core/Typography";
+import {blue, purple} from "@material-ui/core/colors";
+import Switch from "@material-ui/core/Switch";
 
 const styles = theme => ({
 
@@ -39,9 +41,26 @@ const styles = theme => ({
 
 });
 
+const PurpleSwitch = withStyles({
+    switchBase: {
+        color: purple[300],
+        '&$checked': {
+            color: purple[500],
+        },
+        '&$checked + $track': {
+            backgroundColor: purple[500],
+        },
+    },
+    checked: {},
+    track: {},
+})(Switch);
+
+
 function Tags(props){
     const { classes} = props
-
+    var btnStyle = {
+        backgroundColor: 'blue'
+    }
     return (
         <React.Fragment>
             <div className={classes.layout}>
@@ -69,7 +88,9 @@ function Tags(props){
                 </Grid>
                 <Grid container spacing={8}>
                     <Grid item xs={2}>
-                        <button className={classes.button}>
+                        <button className={classes.button}
+                                style={btnStyle}
+                        >
                             Bird Strike
                         </button>
                     </Grid>
