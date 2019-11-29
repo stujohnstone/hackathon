@@ -104,7 +104,7 @@ function frontPage(props){
                           <AutoCompleteSelectCountries label={"Destination"}/>
                         </Grid>
                         <Grid item xs={12}>
-                            <Map/>
+                            <Map zoom='10' lat='51.4700' long='-0.4543'/>
                         </Grid>
                     </Grid>
                     </Grid>
