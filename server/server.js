@@ -17,8 +17,8 @@ app.use(cors());
  * API
  */
 //Post Newsfeed
-app.post('/api/data', (req, res) => {
-  db.collection('hackathon').save(req.body, (err, result) => {
+app.post('/api/messages', (req, res) => {
+  db.collection('messages').save(req.body, (err, result) => {
     if (err) return console.log(err)
 
     console.log('saved to database')
@@ -27,14 +27,15 @@ app.post('/api/data', (req, res) => {
 });
 
 //Get Newsfeed
-app.get('/api/data', (req, res) => {
-  db.collection('hackathon').find().toArray((err, result) => {
+app.get('/api/messages', (req, res) => {
+  db.collection('messages').find().toArray((err, result) => {
     if (err) return console.log('**ERROR' + err)
     res.status(200).send(result);
   })
 })
 
 //Get Mock Newsfeed
+/*
 app.get('/api/newsfeed', function(req, res, next) {
   let data = [{
     date: new Date(),
@@ -48,7 +49,7 @@ app.get('/api/newsfeed', function(req, res, next) {
   },];
   res.status(200).send(data);
 });
-
+*/
 
 /**
 * STATIC FILES
