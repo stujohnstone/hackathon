@@ -57,6 +57,17 @@ export const NewsFeedItem = props => {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+  function PostHeader(props) {
+    if (!!props.item.image) {
+      return <CardMedia
+      className={classes.media}
+      image={`dist/resources/post_${props.item.image}.png`}
+      title={props.item.image}
+    />;
+    }
+    return <Map zoom='5' lat={props.item.lat} long={props.item.long}/>;
+  }
   
   return (
     <Card className={classes.card}>
@@ -73,7 +84,8 @@ export const NewsFeedItem = props => {
         title={props.item.title}
         subheader={props.item.message_date}
       />
-      <Map zoom='5' lat={props.item.lat} long={props.item.long}/>
+      <PostHeader item={props.item} ></PostHeader>
+
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">{props.item.message}
         </Typography>
